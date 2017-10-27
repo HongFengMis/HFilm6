@@ -18,3 +18,11 @@ Action.Video = function(id){
 Action.VideoEnd = function(id){
     Room.ppt({id:[Room.id, "Nav"] , mov:["fadeOut" , "fadeIn"]});
 };
+
+IOW.run.play = function(){
+    console.log(Room.id);
+    if(Room.id!="Video" && Dom.GuestMode){
+        Action.Video();
+        Dom.Video.play(0);
+    }
+};

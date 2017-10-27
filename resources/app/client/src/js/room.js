@@ -27,7 +27,13 @@ Rooms.Nav.io = function(){
 
     socket.on("nav", function(){
         Action.Nav();
-        // Dom.Video.pause(0);
+    });
+
+    socket.on("GuestMode", function(){
+        Dom.GuestMode = 1;
+    });
+    socket.on("GuestModeEnd", function(){
+        Dom.GuestMode = 0;
     });
 
     // socket.on("video", function(){
